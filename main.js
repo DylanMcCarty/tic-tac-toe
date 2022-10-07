@@ -20,12 +20,12 @@ function checkWin() {
     indexNum[0].playerTurn++
     for (let i of winConditions) {
         if (gameState[i[0]] === 'X' && gameState[i[1]] === 'X' && gameState[i[2]] === 'X') {
-            clearBoard()
             winGame()
+            clearBoard()
         } 
         if (gameState[i[0]] === 'O' && gameState[i[1]] === 'O' && gameState[i[2]] === 'O') {
-            clearBoard()
             winGame() 
+            clearBoard()
         } 
     }
     if (indexNum[0].playerTurn === 9) {
@@ -54,9 +54,8 @@ function click() {
 }
 
 function createGame() {
-
     let btn = document.getElementById('startButton')
-    btn.remove()
+    if (btn) {btn.remove()}
     let containerDiv = document.createElement('div')
     document.body.appendChild(containerDiv)
     containerDiv.classList.add('container')
@@ -77,19 +76,18 @@ function createGame() {
 function divEventListeners() {
     for (let i = 0; i < 9; i++) {
         let div = document.getElementById(`div${i}`)
-        div.addEventListener('click', gameTurn)
+        div.addEventListener('click', gameTurn, {once : true})
     }
+    resetGameBtn()
 }
 
 function gameTurn(e) {
     for (let i = 0; i < 9; i++) {
         if (e.target.id == `div${i}`) {
             indexNum[0].p = i
-            console.log(`im tile ${i}`)
-            click()
             let div = document.getElementById(`div${i}`)
-            div.removeEventListener('click', gameTurn)
-            div.textContent = indexNum[0].playerLetter
+            click()
+            div.textContent = indexNum[0].playerLetter            
         }    
     }
 }
@@ -108,8 +106,14 @@ let winConditions = [
 function clearBoard() {
     for (let i = 0; i < 9; i++) {
         let div = document.getElementById(`div${i}`) 
-        div.remove()           
+        if (div) {div.remove()}          
     }
+    // let resetbtn = document.getElementById('resetbtn')
+    // resetbtn.remove()
+    // let rowDiv = document.getElementById('rowDiv')
+    // rowDiv.remove()
+    // let containerDiv = document.getElementById('contDiv')
+    // containerDiv.remove()
 }
 
 function winGame() {
@@ -132,3 +136,29 @@ function failGame() {
     div2.id = 'loseDiv'
     div2.textContent = 'Game Over, Its a Tie!'
 }
+
+function resetGameBtn() {
+    let resetbtn = document.createElement('button') 
+    resetbtn.id = 'resetbtn' 
+    resetbtn.textContent = 'Reset Game'
+    resetbtn.addEventListener('click', () => {
+        clearBoard()
+        createGame()
+    })
+    document.body.appendChild(resetbtn)
+}
+
+// function createImage() {
+//     if (indexNum[0].playerTurn === 6) {
+//         let btn = document.createElement('button')
+//         document.body.appendChild(btn)
+//         btn.textContent = 'silentPickel'
+//         btn.id = 'btn'
+//         btn.addEventListener('click', () => {
+//             let img = document.createElement('img')
+//             img.id = 'goofyImg'
+//             img.src = '../masonpickle.jpg'
+//             document.body.appendChild(img)
+//         })
+//     }
+// }
