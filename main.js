@@ -7,6 +7,15 @@ let indexNum = [{
     playerTurn : 0
 }]
 
+function startButton() {
+    let btn = document.createElement('button')
+    document.body.appendChild(btn)
+    btn.textContent = 'Start Game'
+    btn.id = 'startButton'
+    btn.addEventListener('click', createGame)
+}
+startButton()
+
 function checkWin() {
     indexNum[0].playerTurn++
     for (let i of winConditions) {
@@ -43,6 +52,8 @@ function click() {
 }
 
 function createGame() {
+    let btn = document.getElementById('startButton')
+    btn.remove()
     let containerDiv = document.createElement('div')
     document.body.appendChild(containerDiv)
     containerDiv.classList.add('container')
@@ -59,7 +70,6 @@ function createGame() {
     }
     divEventListeners()
 }
-createGame()
 
 function divEventListeners() {
     for (let i = 0; i < 9; i++) {

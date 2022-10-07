@@ -111,3 +111,11 @@
 #winDiv {
     font-size: 190px;
 }
+#startButton {
+    margin-top: 400px;
+    margin-left: 400px;
+    width: 400px;
+    height: 130px;
+    border-radius: 20px;
+    font-size: 50px;
+}
