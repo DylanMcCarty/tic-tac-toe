@@ -68,6 +68,19 @@ function divEventListeners() {
     }
 }
 
+function gameTurn(e) {
+    for (let i = 0; i < 9; i++) {
+        if (e.target.id == `div${i}`) {
+            indexNum[0].p = i
+            console.log(`im tile ${i}`)
+            click()
+            let div = document.getElementById(`div${i}`)
+            div.removeEventListener('click', gameTurn)
+            div.textContent = indexNum[0].playerLetter
+        }    
+    }
+}
+
 let winConditions = [
     [0,4,8],
     [2,4,6],
