@@ -101,7 +101,7 @@ function clearBoard() {
 
 function winGame() {
     let div = document.createElement('div')
-    let hardtoname = document.getElementById('masterDiv')
+    let hardtoname = document.getElementById('rowDiv')
     hardtoname.appendChild(div)
     div.id = 'winDiv'
     if (indexNum[0].player === 0) {
@@ -114,7 +114,7 @@ function winGame() {
 
 function failGame() {
     let div2 = document.createElement('div')
-    let hardtoname = document.getElementById('masterDiv')
+    let hardtoname = document.getElementById('rowDiv')
     hardtoname.appendChild(div2)
     div2.id = 'loseDiv'
     div2.textContent = 'Game Over, Its a Tie!'
