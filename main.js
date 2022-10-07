@@ -78,3 +78,10 @@ let winConditions = [
     [1,4,7],
     [0,3,6]
 ]
+
+function clearBoard() {
+    for (let i = 0; i < 9; i++) {
+        let div = document.getElementById(`div${i}`) 
+        div.remove()           
+    }
+}
