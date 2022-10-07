@@ -1,4 +1,33 @@
+let gameState = ['', '', '', '', '', '', '', '', '']
 
+let indexNum = [{
+    p : 0,
+    playerLetter : null,
+    player : 0,
+    playerTurn : 0
+}]
+
+
+function click() {
+    // indexNum[0].playerTurn++
+    if (indexNum[0].player === 0) {
+        indexNum[0].playerLetter = 'X'
+        gameState.splice([indexNum[0].p], 1, indexNum[0].playerLetter)
+        console.log(gameState)
+        // checkWin()
+        if (!checkWin()) {
+            indexNum[0].player++
+        }
+    } else if (indexNum[0].player === 1) {
+        indexNum[0].playerLetter = 'O'
+        gameState.splice([indexNum[0].p], 1, indexNum[0].playerLetter)
+        console.log(gameState)
+        // checkWin()
+        if (!checkWin()) {
+            indexNum[0].player-- 
+        }
+    }
+}
 
 function createGame() {
     let containerDiv = document.createElement('div')
