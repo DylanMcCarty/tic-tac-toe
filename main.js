@@ -85,3 +85,16 @@ function clearBoard() {
         div.remove()           
     }
 }
+
+function winGame() {
+    let div = document.createElement('div')
+    let hardtoname = document.getElementById('masterDiv')
+    hardtoname.appendChild(div)
+    div.id = 'winDiv'
+    if (indexNum[0].player === 0) {
+        div.textContent = 'Player X Won!!!'
+    }
+    if (indexNum[0].player === 1) {
+        div.textContent = 'Player O Won!!!'
+    }
+}
