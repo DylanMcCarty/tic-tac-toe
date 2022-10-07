@@ -35,6 +35,8 @@ function checkWin() {
 }
 
 function click() {
+    let aud = new Audio('../click.mp3')
+    aud.play()
     if (indexNum[0].player === 0) {
         indexNum[0].playerLetter = 'X'
         gameState.splice([indexNum[0].p], 1, indexNum[0].playerLetter)
@@ -52,6 +54,7 @@ function click() {
 }
 
 function createGame() {
+
     let btn = document.getElementById('startButton')
     btn.remove()
     let containerDiv = document.createElement('div')
