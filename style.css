@@ -1,0 +1,111 @@
+#div0 {
+    font-weight: 100;
+    font-size: 90px;
+    text-align: center;
+    border: 5px;
+    border-color: black;
+    max-width: 233px;
+    max-height: 233px;
+    min-width: 233px;
+    min-height: 233px;
+}
+#div1 {
+    font-weight: 100;
+    font-size: 90px;
+    text-align: center;
+    border: 5px;
+    border-color: black;
+    max-width: 233px;
+    max-height: 233px;
+    min-width: 233px;
+    min-height: 233px;
+}
+#div2 {
+    font-weight: 100;
+    font-size: 90px;
+    text-align: center;
+    border: 5px;
+    border-color: black;
+    max-width: 233px;
+    max-height: 233px;
+    min-width: 233px;
+    min-height: 233px;
+}
+#div3 {
+    font-weight: 100;
+    font-size: 90px;
+    text-align: center;
+    border: 5px;
+    border-color: black;
+    max-width: 233px;
+    max-height: 233px;
+    min-width: 233px;
+    min-height: 233px;
+}
+#div4 {
+    font-weight: 100;
+    font-size: 90px;
+    text-align: center;
+    border: 5px;
+    border-color: black;
+    max-width: 233px;
+    max-height: 233px;
+    min-width: 233px;
+    min-height: 233px;
+}
+#div5 {
+    font-weight: 100;
+    font-size: 90px;
+    text-align: center;
+    border: 5px;
+    border-color: black;
+    max-width: 233px;
+    max-height: 233px;
+    min-width: 233px;
+    min-height: 233px;
+}
+#div6 {
+    font-weight: 100;
+    font-size: 90px;
+    text-align: center;
+    border: 5px;
+    border-color: black;
+    max-width: 233px;
+    max-height: 233px;
+    min-width: 233px;
+    min-height: 233px;
+}
+#div7 {
+    font-weight: 100;
+    font-size: 90px;
+    text-align: center;
+    border: 5px;
+    border-color: black;
+    max-width: 233px;
+    max-height: 233px;
+    min-width: 233px;
+    min-height: 233px;
+}
+#div8 {
+    font-weight: 100;
+    font-size: 90px;
+    text-align: center;
+    border: 5px;
+    border-color: black;
+    max-width: 233px;
+    max-height: 233px;
+    min-width: 233px;
+    min-height: 233px;
+}
+#rowDiv {
+    max-height: 700px;
+    max-width: 700px;
+    align-content: center;
+}
+
+#loseDiv {
+    font-size: 150px;
+}
+#winDiv {
+    font-size: 190px;
+}
