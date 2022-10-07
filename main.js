@@ -60,3 +60,62 @@ function createGame() {
     divEventListeners()
 }
 createGame()
+
+function divEventListeners() {
+    for (let i = 0; i < 9; i++) {
+        let div = document.getElementById(`div${i}`)
+        div.addEventListener('click', gameTurn)
+    }
+}
+
+function gameTurn(e) {
+    for (let i = 0; i < 9; i++) {
+        if (e.target.id == `div${i}`) {
+            indexNum[0].p = i
+            console.log(`im tile ${i}`)
+            click()
+            let div = document.getElementById(`div${i}`)
+            div.removeEventListener('click', gameTurn)
+            div.textContent = indexNum[0].playerLetter
+        }    
+    }
+}
+
+let winConditions = [
+    [0,4,8],
+    [2,4,6],
+    [0,1,2],
+    [3,4,5],
+    [6,7,8],
+    [2,5,8],
+    [1,4,7],
+    [0,3,6]
+]
+
+function clearBoard() {
+    for (let i = 0; i < 9; i++) {
+        let div = document.getElementById(`div${i}`) 
+        div.remove()           
+    }
+}
+
+function winGame() {
+    let div = document.createElement('div')
+    let hardtoname = document.getElementById('masterDiv')
+    hardtoname.appendChild(div)
+    div.id = 'winDiv'
+    if (indexNum[0].player === 0) {
+        div.textContent = 'Player X Won!!!'
+    }
+    if (indexNum[0].player === 1) {
+        div.textContent = 'Player O Won!!!'
+    }
+}
+
+function failGame() {
+    let div2 = document.createElement('div')
+    let hardtoname = document.getElementById('masterDiv')
+    hardtoname.appendChild(div2)
+    div2.id = 'loseDiv'
+    div2.textContent = 'Game Over, Its a Tie!'
+}
