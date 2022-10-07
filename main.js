@@ -60,3 +60,10 @@ function createGame() {
     divEventListeners()
 }
 createGame()
+
+function divEventListeners() {
+    for (let i = 0; i < 9; i++) {
+        let div = document.getElementById(`div${i}`)
+        div.addEventListener('click', gameTurn)
+    }
+}
