@@ -7,6 +7,15 @@ let indexNum = [{
     playerTurn : 0
 }]
 
+function startButton() {
+    let btn = document.createElement('button')
+    document.appendChild(btn)
+    btn.textContent = 'Start Game'
+    btn.id = 'startButton'
+    btn.addEventListener('click', createGame())
+}
+
+
 function checkWin() {
     // console.log('i made it in the check win function')
     indexNum[0].playerTurn++
