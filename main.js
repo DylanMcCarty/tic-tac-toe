@@ -111,3 +111,11 @@ function winGame() {
         div.textContent = 'Player O Won!!!'
     }
 }
+
+function failGame() {
+    let div2 = document.createElement('div')
+    let hardtoname = document.getElementById('masterDiv')
+    hardtoname.appendChild(div2)
+    div2.id = 'loseDiv'
+    div2.textContent = 'Game Over, Its a Tie!'
+}
