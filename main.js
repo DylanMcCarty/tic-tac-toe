@@ -70,6 +70,7 @@ function createGame() {
         div.id = `div${i}`
         div.classList.add('col-4', 'border', 'border-dark')
     }
+    
     divEventListeners()
 }
 
@@ -131,13 +132,13 @@ function failGame() {
     div2.textContent = 'Game Over, Its a Tie!'
 }
 
-function resetGameBtn() {
-    let resetbtn = document.createElement('button') 
-    resetbtn.id = 'resetbtn' 
-    resetbtn.textContent = 'Reset Game'
-    resetbtn.addEventListener('click', () => {
-        clearBoard()
-        createGame()
-    })
-    document.body.appendChild(resetbtn)
-}
+// function resetGameBtn() {
+//     let resetbtn = document.createElement('button') 
+//     resetbtn.id = 'resetbtn' 
+//     resetbtn.textContent = 'Reset Game'
+//     resetbtn.addEventListener('click', () => {
+//         clearBoard()
+//         createGame()
+//     })
+//     document.body.appendChild(resetbtn)
+// }
