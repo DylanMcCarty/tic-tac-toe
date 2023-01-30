@@ -108,12 +108,6 @@ function clearBoard() {
         let div = document.getElementById(`div${i}`) 
         if (div) {div.remove()}          
     }
-    // let resetbtn = document.getElementById('resetbtn')
-    // resetbtn.remove()
-    // let rowDiv = document.getElementById('rowDiv')
-    // rowDiv.remove()
-    // let containerDiv = document.getElementById('contDiv')
-    // containerDiv.remove()
 }
 
 function winGame() {
@@ -147,18 +141,3 @@ function resetGameBtn() {
     })
     document.body.appendChild(resetbtn)
 }
-
-// function createImage() {
-//     if (indexNum[0].playerTurn === 6) {
-//         let btn = document.createElement('button')
-//         document.body.appendChild(btn)
-//         btn.textContent = 'silentPickel'
-//         btn.id = 'btn'
-//         btn.addEventListener('click', () => {
-//             let img = document.createElement('img')
-//             img.id = 'goofyImg'
-//             img.src = '../masonpickle.jpg'
-//             document.body.appendChild(img)
-//         })
-//     }
-// }
